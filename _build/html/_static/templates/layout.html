@@ -1,0 +1,53 @@
+
+{# layout.html #}
+{% extends "!layout.html" %}
+
+
+<!-- add custom css -->
+{% set css_files = css_files + ['_static/css/style.css'] %}
+
+
+<!-- add font-->
+{% block linktags %}
+{{ super() }}
+<link rel="icon" type="image/png" href="_static/img/icon48.png"/>
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="_static/img/icon128.png"/>
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,400,700,600" rel="stylesheet"/>
+<script type="text/javascript" src="_static/js/custom.js"></script>
+{% endblock %}
+
+
+<!-- add header -->
+{% block header %}
+<header> 
+	<div class="navbar">
+		<a  href="https://gorgias.io">
+		<img class="logo" src="_static/img/logo.png" alt="logo"/>
+		</a> 
+	</div>
+</header>
+{% endblock %}
+
+
+<!-- sidebar -->
+{% block sidebarlogo %}
+<div class="sidebarlogo" >
+	<h2> <a class="documentation" href="index.html">Documentation </a> </h2>
+	<ul>
+		<li class="toctree-l0"> 
+			<a class="overview" href="index.html"> Overview</a>  
+		</li>
+	</ul>
+</div>
+{% endblock %}
+
+
+<!-- footer -->
+{% block footer %}
+<footer> 
+	<div class="footer-container">
+		
+	   
+	</div>
+</footer> 
+{% endblock %}

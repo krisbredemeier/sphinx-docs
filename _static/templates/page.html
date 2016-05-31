@@ -1,0 +1,39 @@
+
+{# page.html #}
+{% extends "!page.html" %}
+
+{% block body %}
+
+<!-- add links at the top of index.html -->
+{% if pagename == "index" %}
+<div class="flex-container">
+	<a href='https://stripe.com/docs/api' target=_blank title="Full API documentation">
+	<div class="flex-inside"> 
+		<img src="_static/img/api.png" width=100 height=100>
+		<h3>Full API Docs</h3>
+		<p>Developer documentation for using Gorgias API to send and retrieve data.</p>
+		<span class=link>View the docs &raquo;</span>
+	</div>
+	</a>
+	<a href='https://status.gosquared.com/' target=_blank title="System Status">
+	<div class="flex-inside"> 
+		<img src="_static/img/status.png" width=100 height=100>
+		<h3>System Status</h3>
+		<p>Check and suscribe to notifications on the status of all key Gorgias services.</p>
+		<span  class=link>Check Status &raquo;</span>
+	</div>
+	</a>
+	<a href='https://www.gosquared.com/support/' target=_blank title="Help and Support">
+	<div class="flex-inside"> 
+		<img src="_static/img/question.png" width=100 height=100>
+		<h3>Help & Support</h3>
+		<p>Search for answers to questions about Gorgias in our knowledge base.</p>
+		<span class=link>Get help &raquo;</span>
+	</div>
+	</a>
+</div>
+{% endif %}
+
+{{ super() }}
+{% endblock %}
+

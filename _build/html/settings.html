@@ -1,0 +1,192 @@
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Settings &mdash; gorgias 1.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/css/style.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+
+    <link rel="top" title="gorgias 1.0.0 documentation" href="index.html" />
+    <link rel="next" title="User" href="user.html" />
+    <link rel="prev" title="Gorgias API and Documentation" href="index.html" />
+<link rel="icon" type="image/png" href="_static/img/icon48.png"/>
+<link rel="apple-touch-icon-precomposed" sizes="128x128" href="_static/img/icon128.png"/>
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,400,700,600" rel="stylesheet"/>
+<script type="text/javascript" src="_static/js/custom.js"></script>
+
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+<header> 
+	<div class="navbar">
+		<a  href="https://gorgias.io">
+		<img class="logo" src="_static/img/logo.png" alt="logo"/>
+		</a> 
+	</div>
+</header>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+
+<!-- add links at the top of index.html -->
+
+
+
+  <div class="section" id="settings">
+<h1>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h1>
+<p>Learn how to integrate GoSquared&#8217;s APIs with your website, web apps, mobile apps, and server-side code.</p>
+<div class="section" id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<p>GoSquared provides a Tracking API to send data to GoSquared, and multiple APIs for retrieving data in different forms – the Now and Trends APIs. We also have an Account API for performing actions on your GoSquared user account.</p>
+</div>
+<div class="section" id="code">
+<h2>Code<a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h2>
+<p>If you are on Mac OS X or Linux, chances are that one of the following two
+commands will work for you</p>
+<div class="highlight-guess"><div class="highlight"><pre><span></span>$ sudo easy_install virtualenv
+</pre></div>
+</div>
+<p>or even better</p>
+<div class="highlight-guess"><div class="highlight"><pre><span></span>$ sudo pip install virtualenv
+</pre></div>
+</div>
+<p>One of these will probably install virtualenv on your system.  Maybe it&#8217;s even
+in your package manager.  If you use Ubuntu, try</p>
+<div class="highlight-guess"><div class="highlight"><pre><span></span>    <span class="nt">&lt;script&gt;</span>
+    !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
+    arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
+    d.src=&#39;//d1l6p2sc9645hc.cloudfront.net/tracker.js&#39;;q.parentNode.
+insertBefore(d,q)}(window,document,&#39;script&#39;,&#39;_gs&#39;);
+
+     _gs(&#39;GSN-123456-A&#39;);
+    <span class="nt">&lt;/script&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="full-example-page">
+<h2>Full example page<a class="headerlink" href="#full-example-page" title="Permalink to this headline">¶</a></h2>
+<p>Below is an example page to show where the tracking code should be installed in context with everything else.</p>
+<div class="highlight-guess"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>This is my website<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+
+    <span class="c">&lt;!-- GoSquared Tracking Code --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+      <span class="o">!</span><span class="kd">function</span><span class="p">(</span><span class="nx">g</span><span class="p">,</span><span class="nx">s</span><span class="p">,</span><span class="nx">q</span><span class="p">,</span><span class="nx">r</span><span class="p">,</span><span class="nx">d</span><span class="p">){</span><span class="nx">r</span><span class="o">=</span><span class="nx">g</span><span class="p">[</span><span class="nx">r</span><span class="p">]</span><span class="o">=</span><span class="nx">g</span><span class="p">[</span><span class="nx">r</span><span class="p">]</span><span class="o">||</span><span class="kd">function</span><span class="p">(){(</span><span class="nx">r</span><span class="p">.</span><span class="nx">q</span><span class="o">=</span><span class="nx">r</span><span class="p">.</span><span class="nx">q</span><span class="o">||</span><span class="p">[]).</span><span class="nx">push</span><span class="p">(</span>
+      <span class="nx">arguments</span><span class="p">)};</span><span class="nx">d</span><span class="o">=</span><span class="nx">s</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="nx">q</span><span class="p">);</span><span class="nx">q</span><span class="o">=</span><span class="nx">s</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="nx">q</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+      <span class="nx">d</span><span class="p">.</span><span class="nx">src</span><span class="o">=</span><span class="s1">&#39;//d1l6p2sc9645hc.cloudfront.net/tracker.js&#39;</span><span class="p">;</span><span class="nx">q</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span>
+      <span class="nx">insertBefore</span><span class="p">(</span><span class="nx">d</span><span class="p">,</span><span class="nx">q</span><span class="p">)}(</span><span class="nb">window</span><span class="p">,</span><span class="nb">document</span><span class="p">,</span><span class="s1">&#39;script&#39;</span><span class="p">,</span><span class="s1">&#39;_gs&#39;</span><span class="p">);</span>
+      <span class="nx">_gs</span><span class="p">(</span><span class="s1">&#39;GSN-123456-A&#39;</span><span class="p">);</span>
+    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="c">&lt;!-- End GoSquared Tracking Code --&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    The rest of my website is here
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="getting-help-updates">
+<h2>Getting help &amp; updates<a class="headerlink" href="#getting-help-updates" title="Permalink to this headline">¶</a></h2>
+<p>We’re always happy to help you get set up with GoSquared. If you&#8217;re stuck, want to find out more or need to speak to us, see the support centre.</p>
+</div>
+<div class="section" id="developer-mailing-list">
+<h2>Developer mailing list<a class="headerlink" href="#developer-mailing-list" title="Permalink to this headline">¶</a></h2>
+<p>We&#8217;re always pushing updates to our integration tools and APIs, so we run a developer mailing list where we keep you up to date on our latest work.</p>
+<p>To be in the know of new features and updates as soon as they happen, join our mailing list and get access to betas and features before they launch.</p>
+</div>
+</div>
+
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div class="sidebarlogo" >
+	<h2> <a class="documentation" href="index.html">Documentation </a> </h2>
+	<ul>
+		<li class="toctree-l0"> 
+			<a class="overview" href="index.html"> Overview</a>  
+		</li>
+	</ul>
+</div>
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user.html">User</a></li>
+<li class="toctree-l1"><a class="reference internal" href="integration.html">Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rule.html">Rule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="action.html">Action</a></li>
+<li class="toctree-l1"><a class="reference internal" href="event.html">Event</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ticket.html">Ticket</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ticketmessage.html">TicketMessage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="widget.html">Widget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="widgetfield.html">WidgetField</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://stripe.com/docs/api">Full API Reference &nbsp; &raquo;</a></li>
+    
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+<footer> 
+	<div class="footer-container">
+		
+	   
+	</div>
+</footer> 
+
+  </body>
+</html>
